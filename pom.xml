@@ -38,5 +38,21 @@
                 </configuration>
             </plugin>
         </plugins>
+         <distributionManagement>
+       <repository>
+           <id>artifactory</id>
+           <name>Artifactory Repository</name>
+           <url>http://localhost:8082/artifactory/construction-repo</url>
+       </repository>
+   </distributionManagement>
+         <build>
+       <plugins>
+           <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-deploy-plugin</artifactId>
+               <version>3.0.0-M1</version>
+           </plugin>
+       </plugins>
+   </build>
     </build>
 </project>
